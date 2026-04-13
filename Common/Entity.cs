@@ -1,4 +1,6 @@
-﻿namespace Platform.Domain.Common
+
+
+namespace Platform.Domain.Common
 {
     public abstract class Entity
     {
@@ -11,7 +13,7 @@
         public DateTime? DeletedAt { get; protected set; }
         public string? DeletedBy { get; protected set; }
         
-        public void SetCreated(DateTime createdAt, string? createdBy)
+         public void SetCreated(DateTime createdAt, string? createdBy)
         {
             CreatedAt = createdAt;
             CreatedBy = createdBy;
@@ -27,6 +29,7 @@
             DeletedAt = deletedAt;
             DeletedBy = deletedBy;
         }
+
         public override bool Equals(object? obj)
         {
             if (obj is not Entity other) return false;
