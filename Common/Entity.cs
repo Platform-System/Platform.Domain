@@ -1,5 +1,4 @@
-
-
+using Platform.BuildingBlocks.DateTimes;
 namespace Platform.Domain.Common
 {
     public abstract class Entity
@@ -12,8 +11,8 @@ namespace Platform.Domain.Common
         public bool IsSoftDeleted { get; protected set; }
         public DateTime? DeletedAt { get; protected set; }
         public string? DeletedBy { get; protected set; }
-        
-         public void SetCreated(DateTime createdAt, string? createdBy)
+
+        public void SetCreated(DateTime createdAt, string? createdBy)
         {
             CreatedAt = createdAt;
             CreatedBy = createdBy;
