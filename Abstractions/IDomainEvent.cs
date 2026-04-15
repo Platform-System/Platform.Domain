@@ -1,4 +1,4 @@
-﻿namespace Platform.Domain.Abstractions
+namespace Platform.Domain.Abstractions
 {
     public interface IDomainEvent
     {

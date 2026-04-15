@@ -1,4 +1,4 @@
-﻿using Platform.Domain.Abstractions;
+using Platform.Domain.Abstractions;
 
 namespace Platform.Domain.Common
 {
