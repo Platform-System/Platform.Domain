@@ -12,6 +12,19 @@ namespace Platform.Domain.Common
         public DateTime? DeletedAt { get; protected set; }
         public string? DeletedBy { get; protected set; }
 
+        protected Entity(Guid? id = null)
+        {
+            if (id.HasValue)
+            {
+                if (id.Value == Guid.Empty)
+                {
+                    throw new ArgumentException("Id cannot be empty.", nameof(id));
+                }
+
+                Id = id.Value;
+            }
+        }
+
         public void SetCreated(DateTime createdAt, string? createdBy)
         {
             CreatedAt = createdAt;
