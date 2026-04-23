@@ -1,4 +1,4 @@
-name: Domain CI
+name: CI
 
 on:
   push:
@@ -10,5 +10,6 @@ jobs:
     with:
       project_path: 'Platform.Domain.csproj'
       dependencies: 'Platform-System/Platform.BuildingBlocks'
+
 
 
